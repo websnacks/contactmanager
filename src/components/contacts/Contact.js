@@ -59,7 +59,6 @@ class Contact extends Component {
                 />
                 <Link to={`contact/edit/${id}`}>
                   <i
-                    onClick={this.onDeleteClick.bind(this, id, dispatch)}
                     className="fas fa-edit"
                     style={{
                       cursor: 'pointer',

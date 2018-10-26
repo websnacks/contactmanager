@@ -6,6 +6,7 @@ const Context = React.createContext();
 const reducer = (state, action) => {
   switch (action.type) {
     case 'DELETE_CONTACT':
+      console.log('deleting...');
       return {
         ...state, // spread the array...
         contacts: state.contacts.filter(
@@ -21,7 +22,7 @@ const reducer = (state, action) => {
       return {
         ...state, // spread the array...
         contacts: state.contacts.map(
-          // loop through the contacts
+          //     // loop through the contacts
           contact =>
             contact.id === action.payload.id
               ? (contact = action.payload)
